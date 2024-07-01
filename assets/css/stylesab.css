@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #e0f7fa; /* Light blue */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #01579b; /* Dark blue */
+}
+
+.navbar {
+    background-color: #0288d1; /* Medium blue */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    width: 40px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00e5ff; /* Cyan */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Info Section */
+.info-section {
+    background-color: #ffffff; /* Light blue */
+    padding: 2rem 0;
+}
+
+.info-section .info-block {
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    background-color: #81d4fa; /* Medium light blue */
+    color: #fff;
+}
+
+.info-section .info-block:hover {
+    background-color: #4fc3f7; /* Medium blue */
+}
+
+.info-section img {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.info-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-section p {
+    margin: 0;
+}
+
+.info-section h3 {
+    margin-bottom: 1rem;
+}
+
+/* Team Section */
+.member-section {
+    background-color: #e1f5fe; /* Very light blue */
+    padding: 2rem 0;
+}
+
+.member-section .member-block {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    background-color: #b3e5fc; /* Light blue */
+    color: #fff;
+    margin: 0 1rem; /* Added margin for spacing between blocks */
+}
+
+.member-section .member-block:hover {
+    background-color: #81d4fa; /* Medium light blue */
+}
+
+.member-section .member-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the member blocks */
+}
+
+.member-section img {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: box-shadow 0.3s ease;
+    margin-right: 10px; /* Space between images */
+}
+
+.member-section img:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.info-block, .member-block {
+    animation: slideInUp 1s ease-in-out;
+}
+
+/* New Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: #f1f1f1;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+/* Apply new animations */
+.info-section .info-block:hover, .member-section .member-block:hover {
+    animation: colorChange 0.6s ease-in-out;
+}
+
+.info-section img:hover, .member-section img:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Social Icons */
+.social-icons a {
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2rem; /* Reduced font size */
+    margin-right: 10px;
+}
+
+.social-icons a:hover {
+    color: #00e5ff; /* Cyan */
+    transform: scale(1.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .info-section .info-block, .member-section .member-block {
+        flex-direction: column;
+    }
+    .info-section .info-block img, .member-section .member-block img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
